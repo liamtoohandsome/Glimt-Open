@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "glimt-open-reference"
+version = "0.1.0"
+description = "A small local FFmpeg clipping reference utility with a desktop UI"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { file = "LICENSE" }
+dependencies = []
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+]
+
+[project.scripts]
+glimt-open = "glimt_open.cli:main"
+glimt-open-gui = "glimt_open.gui:main"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
